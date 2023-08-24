@@ -8,7 +8,7 @@ Dentro da dinâmica do sistema:
 2. A aplicação _Frontend Admin_ do Catálogo de Vídeos vai falar com a _API_ do _backend_ para realizar as ações de cadastro;
 3. A aplicação _Encoder_ de Vídeos vai acessar os vídeos que forem enviados via _Backend_ de Administração de Vídeos, fazer o _encoding_ e salvar os dados em um _bucket_ no _Google Cloud Storage_. Na seqüência, uma notificação é enviada via _RabbitMQ_ para a aplicação Admin do Catálogo de Vídeos atualizar o _status_ de processamento dos vídeos em sua base de dados.
 
-Esta terceira parte contempla o desenvolvimento para o Agregado (segundo _Domain-Driven Design_ (_DDD_)) de Vídeo.
+Esta quarta parte contempla o desenvolvimento para o Agregado (segundo _Domain-Driven Design_ (_DDD_)) de Vídeo.
 
 Com relação ao _software design_, a aplicação segue uma arquitetura _middle-out_, baseada nos modelos de _Clean Architecture_ e _DDD_. O agregado de Vídeo inclui o modelo de _Event-Driven Architecture_ (_EDA_) à aplicação ao implementar _domain events_ e comunicar-se de forma assíncrona com a aplicação _Encoder_.
 
