@@ -1,6 +1,7 @@
 package com.fullcycle.admin.catalogo.domain.category;
 
 import com.fullcycle.admin.catalogo.domain.ActivationStatus;
+import com.fullcycle.admin.catalogo.domain.UnitTest;
 import com.fullcycle.admin.catalogo.domain.validation.handler.Notification;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
@@ -14,7 +15,7 @@ import java.time.temporal.ChronoUnit;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class CategoryTest {
+class CategoryTest extends UnitTest {
 
     @Nested
     class NewCategory {

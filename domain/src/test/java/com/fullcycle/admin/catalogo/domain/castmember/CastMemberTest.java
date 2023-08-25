@@ -1,5 +1,6 @@
 package com.fullcycle.admin.catalogo.domain.castmember;
 
+import com.fullcycle.admin.catalogo.domain.UnitTest;
 import com.fullcycle.admin.catalogo.domain.exceptions.NotificationException;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.Executable;
@@ -8,7 +9,7 @@ import org.junit.jupiter.api.function.ThrowingSupplier;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class CastMemberTest {
+class CastMemberTest extends UnitTest {
 
     @DisplayName("Create a cast member with valid params")
     @Nested

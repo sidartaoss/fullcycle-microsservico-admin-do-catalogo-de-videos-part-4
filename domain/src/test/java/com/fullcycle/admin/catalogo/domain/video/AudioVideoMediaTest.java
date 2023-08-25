@@ -1,5 +1,6 @@
 package com.fullcycle.admin.catalogo.domain.video;
 
+import com.fullcycle.admin.catalogo.domain.UnitTest;
 import com.fullcycle.admin.catalogo.domain.utils.IdUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.function.Executable;
@@ -7,7 +8,7 @@ import org.junit.jupiter.api.function.Executable;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class AudioVideoMediaTest {
+class AudioVideoMediaTest extends UnitTest {
 
     @DisplayName("Create an audio video with valid params")
     @Nested

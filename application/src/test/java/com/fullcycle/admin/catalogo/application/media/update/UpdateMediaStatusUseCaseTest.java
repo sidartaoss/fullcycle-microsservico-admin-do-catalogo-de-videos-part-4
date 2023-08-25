@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import java.util.List;
 import java.util.Optional;
 
+import static com.fullcycle.admin.catalogo.domain.utils.IdUtils.videoIdOf;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.AdditionalAnswers.returnsFirstArg;
 import static org.mockito.ArgumentMatchers.any;
@@ -52,14 +53,15 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             // Given
             final var expectedStatus = MediaStatus.COMPLETED;
             final var expectedFolder = "encoded_media";
-            final var expectedFilename = "filename.mp4";
+            final var expectedFilename = "videoId-696d02e507824064994be29b4b845214/type-VIDEO";
             final var expectedType = VideoMediaType.VIDEO;
             final var expectedMedia = Fixture.Videos.audioVideo(expectedType);
 
             final var aVideo = Fixture.Videos.systemDesign()
                     .configureVideo(expectedMedia);
 
-            final var expectedId = aVideo.getId();
+            final var anId = videoIdOf(expectedFilename);
+            final var expectedId = VideoID.from(anId);
 
             when(videoGateway.findById(any()))
                     .thenReturn(Optional.of(aVideo));
@@ -100,14 +102,15 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             // Given
             final var expectedStatus = MediaStatus.COMPLETED;
             final var expectedFolder = "encoded_media";
-            final var expectedFilename = "filename.mp4";
+            final var expectedFilename = "videoId-696d02e507824064994be29b4b845214/type-VIDEO";
             final var expectedType = VideoMediaType.TRAILER;
             final var expectedMedia = Fixture.Videos.audioVideo(expectedType);
 
             final var aVideo = Fixture.Videos.systemDesign()
                     .configureTrailer(expectedMedia);
 
-            final var expectedId = aVideo.getId();
+            final var anId = videoIdOf(expectedFilename);
+            final var expectedId = VideoID.from(anId);
 
             when(videoGateway.findById(any()))
                     .thenReturn(Optional.of(aVideo));
@@ -148,14 +151,15 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             // Given
             final var expectedStatus = MediaStatus.PROCESSING;
             final String expectedFolder = null;
-            final String expectedFilename = null;
+            final String expectedFilename = "videoId-696d02e507824064994be29b4b845214/type-VIDEO";
             final var expectedType = VideoMediaType.VIDEO;
             final var expectedMedia = Fixture.Videos.audioVideo(expectedType);
 
             final var aVideo = Fixture.Videos.systemDesign()
                     .configureVideo(expectedMedia);
 
-            final var expectedId = aVideo.getId();
+            final var anId = videoIdOf(expectedFilename);
+            final var expectedId = VideoID.from(anId);
 
             when(videoGateway.findById(any()))
                     .thenReturn(Optional.of(aVideo));
@@ -195,14 +199,15 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             // Given
             final var expectedStatus = MediaStatus.PROCESSING;
             final String expectedFolder = null;
-            final String expectedFilename = null;
+            final String expectedFilename = "videoId-696d02e507824064994be29b4b845214/type-VIDEO";
             final var expectedType = VideoMediaType.TRAILER;
             final var expectedMedia = Fixture.Videos.audioVideo(expectedType);
 
             final var aVideo = Fixture.Videos.systemDesign()
                     .configureTrailer(expectedMedia);
 
-            final var expectedId = aVideo.getId();
+            final var anId = videoIdOf(expectedFilename);
+            final var expectedId = VideoID.from(anId);
 
             when(videoGateway.findById(any()))
                     .thenReturn(Optional.of(aVideo));
@@ -247,15 +252,16 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             // Given
             final var expectedStatus = MediaStatus.COMPLETED;
             final var expectedFolder = "encoded_media";
-            final var expectedFilename = "filename.mp4";
+            final var expectedFilename = "videoId-696d02e507824064994be29b4b845214/type-VIDEO";
             final var expectedType = VideoMediaType.VIDEO;
             final var expectedMedia = Fixture.Videos.audioVideo(expectedType);
-            final var anInvalidRandomId = "an-invalid-random-id";
+            final var anInvalidRandomMediaId = "an-invalid-random-media-id";
 
             final var aVideo = Fixture.Videos.systemDesign()
                     .configureVideo(expectedMedia);
 
-            final var expectedId = aVideo.getId();
+            final var anId = videoIdOf(expectedFilename);
+            final var expectedId = VideoID.from(anId);
 
             when(videoGateway.findById(any()))
                     .thenReturn(Optional.of(aVideo));
@@ -263,7 +269,7 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             final var aCommand =
                     UpdateMediaStatusCommand.with(expectedStatus,
                             expectedId.getValue(),
-                            anInvalidRandomId,
+                            anInvalidRandomMediaId,
                             expectedFolder,
                             expectedFilename);
 
@@ -274,11 +280,5 @@ public class UpdateMediaStatusUseCaseTest extends UseCaseTest {
             verify(videoGateway, times(1)).findById(expectedId);
             verify(videoGateway, never()).update(any());
         }
-    }
-
-    private String videoIdOf(final String filePath) {
-        final var beginIndex = filePath.indexOf('-');
-        final var endIndex = filePath.indexOf('/');
-        return filePath.substring(beginIndex + 1, endIndex);
     }
 }

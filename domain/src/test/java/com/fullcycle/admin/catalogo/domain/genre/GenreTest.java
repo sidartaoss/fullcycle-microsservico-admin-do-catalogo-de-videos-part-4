@@ -1,6 +1,7 @@
 package com.fullcycle.admin.catalogo.domain.genre;
 
 import com.fullcycle.admin.catalogo.domain.ActivationStatus;
+import com.fullcycle.admin.catalogo.domain.UnitTest;
 import com.fullcycle.admin.catalogo.domain.category.CategoryID;
 import com.fullcycle.admin.catalogo.domain.exceptions.NotificationException;
 import org.junit.jupiter.api.*;
@@ -15,7 +16,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class GenreTest {
+class GenreTest extends UnitTest {
 
     @DisplayName("Create a new genre with valid params")
     @Nested

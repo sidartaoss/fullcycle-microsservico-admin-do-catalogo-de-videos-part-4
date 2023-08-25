@@ -37,7 +37,7 @@ public class AmqpTestConfiguration {
     }
 
     @Bean
-    SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(final ConnectionFactory connectionFactory) {
+    SimpleRabbitListenerContainerFactory rabbitListtennerContainerFactory(final ConnectionFactory connectionFactory) {
         final var factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         return factory;

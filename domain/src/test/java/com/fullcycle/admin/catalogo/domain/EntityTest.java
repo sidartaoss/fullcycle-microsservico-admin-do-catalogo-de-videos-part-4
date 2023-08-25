@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-public class EntityTest {
+public class EntityTest extends UnitTest{
 
     public static class DummyEvent implements DomainEvent {
 

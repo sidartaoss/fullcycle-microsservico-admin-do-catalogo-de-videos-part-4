@@ -5,6 +5,8 @@ import com.fullcycle.admin.catalogo.domain.video.*;
 
 import java.util.Objects;
 
+import static com.fullcycle.admin.catalogo.domain.utils.IdUtils.videoIdOf;
+
 public class DefaultUpdateMediaStatusUseCase extends UpdateMediaStatusUseCase {
 
     private final VideoGateway videoGateway;
@@ -32,12 +34,6 @@ public class DefaultUpdateMediaStatusUseCase extends UpdateMediaStatusUseCase {
             updateVideo(VideoMediaType.TRAILER, aCommand.status(), aVideo, encodedPath);
             this.videoGateway.update(aVideo);
         }
-    }
-
-    private String videoIdOf(final String filePath) {
-        final var beginIndex = filePath.indexOf('-');
-        final var endIndex = filePath.indexOf('/');
-        return filePath.substring(beginIndex + 1, endIndex);
     }
 
     private void updateVideo(

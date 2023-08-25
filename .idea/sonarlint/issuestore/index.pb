@@ -13,10 +13,6 @@ tapplication/src/main/java/com/fullcycle/admin/catalogo/application/category/ret
 ninfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/ObjectMapperConfig.java,a/8/a804e3217cc1e10613908a3a8907844472a58b16
 §
 tapplication/src/main/java/com/fullcycle/admin/catalogo/application/category/deactivate/DeactivateCategoryOutput.java,f/f/fffaa2ea377707de795b93dbf8394f8e36abc29a
-v
-Finfrastructure/src/test/java/com/fullcycle/admin/catalogo/E2ETest.java,5/2/525cf6c9acef8a360504f7df5132e0fe1203beba
-z
-Jinfrastructure/src/test/java/com/fullcycle/admin/catalogo/JacksonTest.java,6/2/62ef6c0d598667349d4a7ec326f1fcc7d200900b
 °
 qinfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/configuration/openapi/OpenAPIConfig.java,4/2/42485386bbe5c8d9749f163891bd01a0bc827755
 Ä
@@ -81,8 +77,6 @@ qapplication/src/main/java/com/fullcycle/admin/catalogo/application/category/act
 xapplication/src/main/java/com/fullcycle/admin/catalogo/application/category/activate/DefaultActivateCategoryUseCase.java,d/4/d4ee8873030e2e24dea890cfc7a5379b2cb99612
 ™
 zinfrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/deactivate/DeactivateCategoryUseCaseIT.java,6/d/6daa120aca3c583d97eac06d31e5f5d4505f59ab
-
-Oinfrastructure/src/test/java/com/fullcycle/admin/catalogo/MySQLGatewayTest.java,8/f/8f4466c3a31bb2a992805332e7d6f0cfc1e8a027
 ¶
 vinfrastructure/src/test/java/com/fullcycle/admin/catalogo/application/category/activate/ActivateCategoryUseCaseIT.java,1/6/16feaa798f172c3672b33ff546b68d9d24b54b6c
 ß
@@ -203,12 +197,8 @@ uinfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/catego
 sinfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/category/models/UpdateCategoryRequest.java,3/5/355810213d0da1c5cd62bf0063781e719c1f6f41
 
 Oapplication/src/main/java/com/fullcycle/admin/catalogo/application/UseCase.java,7/e/7eb121e706f94274b10c15a6f498f171abb13e14
-}
-Minfrastructure/src/test/java/com/fullcycle/admin/catalogo/ControllerTest.java,7/d/7df58189e2ff2597cea40f2f2a38778181b26b1f
 ä
 Zinfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/api/GenreAPI.java,4/8/486d105a523435bbade4d45b88a9fdd3ecd0485a
-°
-qapplication/src/main/java/com/fullcycle/admin/catalogo/application/castmember/create/CreateCastMemberUseCase.java,f/a/faedf6888d11178f5b00d4b9a24aa55e18c0515d
 ®
 xapplication/src/main/java/com/fullcycle/admin/catalogo/application/castmember/delete/DefaultDeleteCastMemberUseCase.java,3/2/324fa90bc25fafe574e6be9a2b6022820d8c55fa
 Ø
@@ -243,8 +233,6 @@ yinfrastructure/src/main/java/com/fullcycle/admin/catalogo/infrastructure/castme
 Uinfrastructure/src/test/java/com/fullcycle/admin/catalogo/e2e/genre/GenreE2ETest.java,6/4/6472e3c9cf07599342c707ad7d137136868d3f8e
 è
 _infrastructure/src/test/java/com/fullcycle/admin/catalogo/e2e/castmember/CastMemberE2ETest.java,f/f/ff008024640ab8452ff30aae08d2e291c6acda84
-}
-Mdomain/src/test/java/com/fullcycle/admin/catalogo/domain/genre/GenreTest.java,a/4/a4f6301c80d8e7dc5f5a32dd22e7da2c4d0ad352
 á
 Wdomain/src/main/java/com/fullcycle/admin/catalogo/domain/castmember/CastMemberType.java,2/8/288f964294c45fa740a0204f87f7e1247d2dc1cc
 y
@@ -259,8 +247,6 @@ Xdomain/src/main/java/com/fullcycle/admin/catalogo/domain/category/CategoryValid
 hdomain/src/main/java/com/fullcycle/admin/catalogo/domain/validation/handler/ThrowsValidationHandler.java,7/8/7860604647a2815551544c696c47a4a1dc7ae974
 É
 Sdomain/src/main/java/com/fullcycle/admin/catalogo/domain/castmember/CastMember.java,3/1/319dfcfb808bb0d491155cce2b01954b69609aca
-Ü
-Vdomain/src/test/java/com/fullcycle/admin/catalogo/domain/video/VideoValidatorTest.java,5/2/52b3393a01ee8644472bfeb269c70e8e2437a5c2
 Ñ
 Tdomain/src/main/java/com/fullcycle/admin/catalogo/domain/pagination/SearchQuery.java,c/0/c01ca0d0accee6691a0b9488bc907194b0cadf32
 °

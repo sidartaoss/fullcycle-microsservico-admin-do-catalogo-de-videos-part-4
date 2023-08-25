@@ -1,5 +1,6 @@
 package com.fullcycle.admin.catalogo.domain.video;
 
+import com.fullcycle.admin.catalogo.domain.UnitTest;
 import com.fullcycle.admin.catalogo.domain.castmember.CastMemberID;
 import com.fullcycle.admin.catalogo.domain.category.CategoryID;
 import com.fullcycle.admin.catalogo.domain.genre.GenreID;
@@ -12,7 +13,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-class VideoTest {
+class VideoTest extends UnitTest {
 
     @DisplayName("Create a video with valid params")
     @Nested
@@ -282,7 +283,7 @@ class VideoTest {
 
             assertEquals(expectedDomainEventsSize, actualVideo.getDomainEvents().size());
             final var actualEvent = (VideoMediaCreated) actualVideo.getDomainEvents().get(0);
-            assertEquals(aVideo.getId().getValue(), actualEvent.resourceId());
+            assertEquals(aVideoMedia.id(), actualEvent.resourceId());
             assertEquals(aVideoMedia.rawLocation(), actualEvent.filePath());
             assertNotNull(actualEvent.occurredOn());
         }
@@ -361,7 +362,7 @@ class VideoTest {
 
             assertEquals(expectedDomainEventsSize, actualVideo.getDomainEvents().size());
             final var actualEvent = (VideoMediaCreated) actualVideo.getDomainEvents().get(0);
-            assertEquals(aVideo.getId().getValue(), actualEvent.resourceId());
+            assertEquals(aTrailerMedia.id(), actualEvent.resourceId());
             assertEquals(aTrailerMedia.rawLocation(), actualEvent.filePath());
             assertNotNull(actualEvent.occurredOn());
         }
